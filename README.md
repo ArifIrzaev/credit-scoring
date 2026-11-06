@@ -120,9 +120,6 @@ GAM построена как `LogisticGAM(s(0, n_splines=12) + s(1, n_splines=1
   только модели раздела 8.
 - Модели обучены на сбалансированной выборке (50% невыплат), поэтому вероятности
   завышены относительно фактической доли 19% и требуют калибровки.
-- В данных нет дат выдачи, поэтому проверка на более позднем периоде (out-of-time)
-  невозможна; её можно выполнить на полной версии данных Lending Club.
-- Порог отсечения выбран по умолчанию (0.5), а не по стоимости ошибок.
 
 ## Структура
 
@@ -138,16 +135,6 @@ Credit_scoring/
 └── reports/figures/               # графики
 ```
 
-## Как запустить
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-jupyter lab
-```
-
-Откройте `notebooks/credit_scoring.ipynb` → **Kernel → Restart Kernel and Run All Cells**.
 
 ## Стек
 
